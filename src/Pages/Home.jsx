@@ -456,7 +456,7 @@ function Home() {
         <p className="text-[#ef833a] text-center pt-20 text-6xl font-bold ">
           The Sunshine Story
         </p>
-        <div className="max-sm:hidden flex ml-[350px]">
+        <div className="max-sm:hidden flex ml-[270px]">
           <img src={img13} alt="" />
           <img src={img14} alt="" />
           <img src={img15} alt="" />
