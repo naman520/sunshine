@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { LocationData } from "./LocationData";
+import { Testimonials } from "./Testimonials";
 import { Swiper, SwiperSlide } from "swiper/react";
 //import images
 import img3 from "../assets/Grouphero.svg";
@@ -11,6 +12,15 @@ import img7 from "../assets/banner23.svg";
 import img8 from "../assets/professionals1.webp";
 import img9 from "../assets/wavegreen.svg";
 import img10 from "../assets/helpsectionaulaad.svg";
+import img11 from "../assets/shaitaanbaache1.svg";
+import img12 from "../assets/timeline.svg";
+import img13 from "../assets/timeline1.svg";
+import img14 from "../assets/timeline2.svg";
+import img15 from "../assets/timeline3.svg";
+import img16 from "../assets/timeline4.svg";
+import img17 from "../assets/timeline5.svg";
+import img18 from "../assets/timeline_mobile.webp";
+
 // Correct module imports
 import "swiper/css";
 import "swiper/css/navigation";
@@ -22,7 +32,7 @@ function Home() {
     <>
       <div className="">
         <Navbar />
-        <div className="relative bg-[#ef833a] min-h-screen pt-10">
+        <div className="relative  bg-[#9949ba] min-h-screen pt-10">
           <div className="container mx-auto px-4 lg:px-6 flex flex-col lg:flex-row items-center justify-between">
             <div className="text-white w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
               <h1 className="text-3xl lg:text-4xl font-bold leading-snug mb-4">
@@ -171,6 +181,162 @@ function Home() {
         </div>
       </div>
       <div className="bg-[#eef8f9] pt-10">{/* empty div */}</div>
+
+      <div className=" relative bg-[#cfe7d7] lg:bg-transparent text-[#2f2f2f] pt-10 lg:pt-20 ">
+        <img
+          src={img9}
+          alt=""
+          className="absolute z-10 min-h-[100dvh] hidden lg:block"
+        />
+        <p className="text-3xl lg:text-5xl text-center font-bold">
+          How can we help your child
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-28 gap-6 md:max-w-3xl lg:max-w-5xl mx-auto lg:gap-x-80">
+          <div className="text-xl z-10 shadow-xl h-20 lg:h-56  md:h-[160px] lg:w-[600px] md:w-[300px]  pt-3 md:pt-10 md:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
+            <p>Occupational Therapy </p>
+            <p className="text-sm">
+              Paediatric occupational therapy is meant to deliver medical
+              practice to children upto 14 years of age by treating any
+              pediatric condition by engaging the child, their mind in
+              therapeutic activities and improving awareness in daily life by
+              using approaches like sensory integration, Oro-motor therapy,
+              environmental modification, cognitive rehabilitation, gait
+              training etc.
+            </p>
+          </div>
+          <div className="text-xl z-10 shadow-xl h-20 lg:h-56 md:h-[160px] lg:w-[600px] md:w-[300px]  pt-3 md:pt-10 md:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
+            <p>Speech therapy</p>
+            <p className="text-sm">
+              An essential aspect of occupational therapy, focusing on improving
+              communication, language skills, and swallowing functions. It
+              focuses on language, articulation, and swallowing . This
+              integration allows children to work on both their communication
+              abilities and other functional skills, enhancing their overall
+              independence.
+            </p>
+          </div>
+          <div className="text-xl z-10 shadow-xl h-20 lg:h-56 md:h-[160px] lg:w-[600px] md:w-[300px]  pt-3 md:pt-10 md:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
+            <p>Special education</p>
+            <p className="text-sm">
+              Designed to meet the unique needs of students with disabilities,
+              ensuring they have equal access to education and opportunities. It
+              involves individualized instruction, specialized support, and
+              adaptations to curriculum, enabling students to learn and thrive
+              in a way that suits their abilities. The goal is to empower them
+              to reach their full potential both academically and socially.
+            </p>
+          </div>
+          <div className="text-xl z-10 shadow-xl h-20 lg:h-56 md:h-[160px] lg:w-[600px] md:w-[300px]  pt-3 md:pt-10 md:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
+            <p>Psychological counseling</p>
+            <p className="text-sm">
+              An important component of pediatric occupational therapy,
+              addressing the emotional and behavioral needs of children. It
+              helps children develop coping strategies, manage anxiety, and
+              improve their emotional regulation, which supports their
+              participation in daily activities. By addressing mental health
+              alongside physical and cognitive skills, psychological counseling
+              ensures a well-rounded approach to a child's development and
+              overall well-being.
+            </p>
+          </div>
+        </div>
+        <div className=" pt-10 lg:ml-72 flex justify-evenly">
+          <button className=" text-white w-40 z-10  h-10 lg:h-20 lg:w-64 rounded-xl bg-[#ef833a]">
+            Book Assessment
+          </button>
+          <div className="absolute z-0 lg:z-10 bottom-0 lg:-bottom-[10px] right-0  ">
+            <img src={img10} alt="" className=" h-44 lg:h-96  " />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#fcf6de]">
+        <p className="lg:text-5xl font-bold text-center pt-40">
+          What Makes Sunshine by LISSUN Unique
+        </p>
+        <div>
+          <div className=" lg:flex justify-evenly pt-10">
+            <img src={img11} alt="" className="h-56 lg:h-auto ml-20" />
+            <div className="mt-20 lg:mt-32 text-center space-y-5 lg:space-y-10 lg:text-2xl">
+              <p className="font-semibold">
+                Stimulating Environment for your child
+              </p>
+              <p>Thoughtfully designed fostering curiosity and growth.</p>
+              <p>
+                Engaging activities that ignite a love for learning and
+                exploration
+              </p>
+              <p>Encouraging creativity and a sense of wonder</p>
+            </div>
+          </div>
+
+          <div className=" lg:flex justify-evenly pt-10">
+            <img
+              src={img11}
+              alt=""
+              className="h-56 lg:h-auto ml-20 lg:hidden"
+            />
+            <div className="mt-20 lg:mt-32  text-center space-y-5 lg:space-y-10 lg:text-2xl">
+              <p className="font-semibold">
+                Stimulating Environment for your child
+              </p>
+              <p>Thoughtfully designed fostering curiosity and growth.</p>
+              <p>
+                Engaging activities that ignite a love for learning and
+                exploration
+              </p>
+              <p>Encouraging creativity and a sense of wonder</p>
+            </div>
+            <img
+              src={img11}
+              alt=""
+              className="h-56 lg:h-auto ml-20 max-md:hidden"
+            />
+          </div>
+
+          <div className=" lg:flex justify-evenly pt-10 pb-10">
+            <img src={img11} alt="" className="h-56 lg:h-auto ml-20" />
+            <div className="mt-20 lg:mt-32 text-center space-y-5 lg:space-y-10 lg:text-2xl">
+              <p className="font-semibold">
+                Stimulating Environment for your child
+              </p>
+              <p>Thoughtfully designed fostering curiosity and growth.</p>
+              <p>
+                Engaging activities that ignite a love for learning and
+                exploration
+              </p>
+              <p>Encouraging creativity and a sense of wonder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#a0cfad] pt-10 lg:pt-28 h-[700px] lg:h-[900px]">
+        <div className="text-center text-white lg:text-5xl text-2xl text-wrap lg:text-wrap font-semibold">
+          Our Clients Talk About Their Sunshine Experience
+        </div>
+        <div className="pt-32">
+          <div className="container mx-auto px-4">
+            <Swiper
+              modules={[Pagination]}
+              spaceBetween={30}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+            >
+              {Testimonials.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <div className="lg:pt-32">
+                    <div className="pt-10 lg:pt-32 max-sm:text-sm text-xl bg-[#efe9d1] text-center rounded-3xl ml-[45px] h-[250px] w-[370px] lg:ml-[200px] lg:h-[350px] lg:w-[1200px]">
+                      {item.content}
+                      <div className="font-bold">~{item.name}</div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
       <div className="bg-[#f7e59d] lg:bg-transparent ">
         <div className="relative text-center lg:pt-28 text-3xl lg:text-5xl font-bold">
           <img
@@ -180,12 +346,12 @@ function Home() {
           />
           <img src={img6} alt="" className="absolute top-10 hidden lg:block " />
           <p className="text-[#2f2f2f] pt-5 text-center w-full ">
-            Our team of practitioners at Sunshine
+            About K7 THERAPIES
           </p>
         </div>
         {/* boxes */}
         <div className="flex flex-col lg:flex-row justify-center gap-y-6 mt-10 lg:mt-32 ">
-          <div className="  lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-white mx-auto">
+          <div className="  lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -198,14 +364,15 @@ function Home() {
                     Child Psychologists
                   </p>
                   <p className="text-sm lg:text-lg text-center mt-5">
-                    Helping kids navigate emotions, building resilience for
-                    life's journey.
+                    K7 THERAPIES strives to be an excellent service provider,
+                    giving therapies online globally and offline sessions at our
+                    well equipped pediatric therapy set up.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="  lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-white mx-auto">
+          <div className="  bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -218,14 +385,13 @@ function Home() {
                     Child Psychologists
                   </p>
                   <p className="text-sm lg:text-lg text-center mt-5">
-                    Helping kids navigate emotions, building resilience for
-                    life's journey.
+                  K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-white mx-auto">
+          <div className=" bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -238,14 +404,13 @@ function Home() {
                     Child Psychologists
                   </p>
                   <p className="text-sm lg:text-lg text-center mt-5">
-                    Helping kids navigate emotions, building resilience for
-                    life's journey.
+                  We focus on over all health of our children and  believe to bring back the child to their daily life.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-white mx-auto">
+          <div className=" bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -258,14 +423,14 @@ function Home() {
                     Child Psychologists
                   </p>
                   <p className="text-sm lg:text-lg text-center mt-5">
-                    Helping kids navigate emotions, building resilience for
-                    life's journey.
+                  K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
+
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-white mx-auto">
+          <div className=" bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -278,8 +443,7 @@ function Home() {
                     Child Psychologists
                   </p>
                   <p className="text-sm lg:text-lg text-center mt-5">
-                    Helping kids navigate emotions, building resilience for
-                    life's journey.
+                  Our ultimate goal is to make our children independent leading a successful and fruitful life.
                   </p>
                 </div>
               </div>
@@ -288,61 +452,20 @@ function Home() {
         </div>
         <img src={img7} alt="" className=" lg:ml-36  " />
       </div>
-      <div className=" relative bg-[#cfe7d7] lg:bg-transparent text-[#2f2f2f] pt-10 lg:pt-20 ">
-        <img
-          src={img9}
-          alt=""
-          className="absolute z-10 min-h-screen hidden lg:block"
-        />
-        <p className="text-3xl lg:text-5xl text-center font-bold">
-          How can we help your child
+      <div className="bg-[#fcf6de]">
+        <p className="text-[#ef833a] text-center pt-20 text-6xl font-bold ">
+          The Sunshine Story
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-28 gap-6 lg:max-w-5xl mx-auto gap-x-80">
-          <div className="text-xl z-10 shadow-xl h-20 lg:h-32 lg:w-[600px]  pt-3 lg:pt-10 lg:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
-            <p>IQ Assessments</p>
-            <p className="text-sm">
-              Unveiling cognitive potential, a key to tailored growth
-              strategies.
-            </p>
-          </div>
-          <div className="text-xl z-10 shadow-xl h-20 lg:h-32 lg:w-[600px]  pt-3 lg:pt-10 lg:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
-            <p>IQ Assessments</p>
-            <p className="text-sm">
-              Unveiling cognitive potential, a key to tailored growth
-              strategies.
-            </p>
-          </div>
-          <div className="text-xl z-10 shadow-xl h-20 lg:h-32 lg:w-[600px]  pt-3 lg:pt-10 lg:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
-            <p>IQ Assessments</p>
-            <p className="text-sm">
-              Unveiling cognitive potential, a key to tailored growth
-              strategies.
-            </p>
-          </div>
-          <div className="text-xl z-10 shadow-xl h-20 lg:h-32 lg:w-[600px]  pt-3 lg:pt-10 lg:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
-            <p>IQ Assessments</p>
-            <p className="text-sm">
-              Unveiling cognitive potential, a key to tailored growth
-              strategies.
-            </p>
-          </div>
-          <div className="text-xl z-10 shadow-xl h-20 lg:h-32 lg:w-[600px]  pt-3 lg:pt-10 lg:pl-10 pl-4 shadow-[#e3e3e3] rounded-3xl bg-white  ">
-            <p>IQ Assessments</p>
-            <p className="text-sm">
-              Unveiling cognitive potential, a key to tailored growth
-              strategies.
-            </p>
-          </div>
+        <div className="max-sm:hidden flex ml-[350px]">
+          <img src={img13} alt="" />
+          <img src={img14} alt="" />
+          <img src={img15} alt="" />
+          <img src={img12} alt="" />
+          <img src={img16} alt="" />
+          <img src={img17} alt="" />
         </div>
-        <div className=" pt-10 lg:ml-96 flex justify-center">
-          <button className=" text-white w-40 z-10  h-10 lg:h-20 lg:w-64 rounded-xl bg-[#ef833a]">
-            Book Assessment
-          </button>
-          <img
-            src={img10}
-            alt=""
-            className="h-40 translate-x-20 z-10 inset-20 lg:h-auto lg:-translate-y-80 lg:translate-x-20"
-          />
+        <div className="flex justify-center pt-10 lg:hidden">
+          <img src={img18} alt="" className=" h-[500px]" />
         </div>
       </div>
     </>

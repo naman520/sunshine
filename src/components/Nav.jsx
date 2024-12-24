@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import img1 from '../assets/k77.webp';
+import img1 from '../assets/whitelogo.7148e965.svg';
 import img2 from '../assets/Comingsoon1.webp';
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Nav() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +25,11 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-white h-[90px]">
+      <div className="bg-[#ef833a] h-[90px]">
         {/* Desktop Navbar */}
         <div className="lg:flex justify-between items-center hidden">
           <img src={img1} alt="Logo" className="pt-1 pl-20 h-[80px]" />
-          <div className="flex gap-8 text-black text-md font-medium pr-36">
+          <div className="flex gap-8 text-white text-md font-medium pr-36">
             <Link to="/" className="relative group">
               Home
               <span className="absolute left-0 top-6 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -121,7 +121,7 @@ export default function Navbar() {
         {/* Mobile Navbar */}
         <div className="lg:hidden flex justify-between items-center px-4">
           <img src={img1} alt="Logo" className="h-[60px]" />
-          <button onClick={toggleMenu} className="text-white  bg-[#9949ba] focus:outline-none">
+          <button onClick={toggleMenu} className="text-white focus:outline-none">
             <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
               {isOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -149,7 +149,7 @@ export default function Navbar() {
       </button>
     </div>
 
-    <Link to="/" className="px-4 py-2 hover:bg-orange-100 bg-[#9949ba]" onClick={toggleMenu}>Home</Link>
+    <Link to="/" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>Home</Link>
     
     {/* Services Dropdown */}
     <div className={`relative ${isServicesDropdownOpen ? 'bg-gray-50' : ''}`}>
@@ -216,8 +216,8 @@ export default function Navbar() {
       <div className="bg-[#89c39a]">
         <div className="flex flex-col md:flex-row justify-center gap-4 items-center p-4">
           <img src={img2} alt="" className="h-[50px] md:h-[80px] " />
-          <p className="text-[#9949ba] text-center md:text-left text-lg md:text-xl font-bold ">
-            Coming Soon: Welcome to K7 family opening in CR PARK (Delhi) very soon!
+          <p className="text-white text-center md:text-left text-lg md:text-xl font-bold ">
+            Coming Soon: New Sunshine by LISSUN centre opening in Lajpat Nagar (Delhi) very soon!
           </p>
           <img src={img2} alt="" className="h-[50px]  md:block hidden" />
         </div>

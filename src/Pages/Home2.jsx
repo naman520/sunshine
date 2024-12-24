@@ -26,12 +26,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import Nav from "../components/Nav";
 
 function Home2() {
   return (
     <>
       <div className="">
-        <Navbar />
+        <Nav/>
         <div className="relative bg-[#ef833a] min-h-screen pt-10">
           <div className="container mx-auto px-4 lg:px-6 flex flex-col lg:flex-row items-center justify-between">
             <div className="text-white w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
