@@ -336,7 +336,7 @@ function Home() {
         </div>
         {/* boxes */}
         <div className="flex flex-col lg:flex-row justify-center gap-y-6 mt-10 lg:mt-32 ">
-          <div className="lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
+          <div className="lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap ">
                 <img
@@ -348,7 +348,7 @@ function Home() {
                   <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-lg text-center mt-5">
+                  <p className="text-sm lg:text-md text-center mt-5">
                     K7 THERAPIES strives to be an excellent service provider,
                     giving therapies online globally and offline sessions at our
                     well equipped pediatric therapy set up.
@@ -357,7 +357,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="  bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          <div className="  bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -369,14 +369,14 @@ function Home() {
                   <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-lg text-center mt-5">
+                  <p className="text-sm lg:text-md text-center mt-5">
                   K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          <div className=" bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -388,14 +388,14 @@ function Home() {
                   <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-lg text-center mt-5">
+                  <p className="text-sm lg:text-md text-center mt-5">
                   We focus on over all health of our children and  believe to bring back the child to their daily life.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          <div className=" bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -407,7 +407,7 @@ function Home() {
                   <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-lg text-center mt-5">
+                  <p className="text-sm lg:text-md text-center mt-5">
                   K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
 
                   </p>
@@ -415,7 +415,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className=" bg-[#39225a] text-white lg:w-72 h-auto lg:h-[550px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          <div className=" bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
                 <img
@@ -427,7 +427,7 @@ function Home() {
                   <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-lg text-center mt-5">
+                  <p className="text-sm lg:text-md text-center mt-5">
                   Our ultimate goal is to make our children independent leading a successful and fruitful life.
                   </p>
                 </div>
