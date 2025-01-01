@@ -311,9 +311,9 @@ function Home() {
               {Testimonials.map((item) => (
                 <SwiperSlide key={item.id}>
                   <div className="lg:pt-32">
-                    <div className="pt-10 lg:pt-32 max-sm:text-sm text-xl bg-[#efe9d1] text-center rounded-3xl ml-[40px] h-[250px] w-[370px] lg:ml-[200px] lg:h-[350px] lg:w-[1100px] lg:break-words">
+                    <div className="pt-10 lg:pt-32 max-sm:text-sm max-md:text-sm text-md bg-[#efe9d1] text-center rounded-3xl sm:ml-[40px] sm:h-[290px] sm:w-[370px] md:ml-[150px] md:h-[320px] md:w-[450px] lg:ml-[100px] lg:h-[350px] lg:w-[1100px] md:break-words">
                       {item.content}
-                      <div className="font-bold">~{item.name}</div>
+                      <div className="font-bold md:mt-4 max-sm:mt-4">~{item.name}</div>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -336,19 +336,20 @@ function Home() {
         </div>
         {/* boxes */}
         <div className="flex flex-col lg:flex-row justify-center gap-y-6 mt-10 lg:mt-32 ">
-          <div className="lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
+          {/* box 1 */}
+          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-sm:justify-normal  md:text-wrap ">
+              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
                 <img
                   src={img8}
                   alt=""
-                  className="lg:w-[150px] lg:h-[150px] max-sm:w-32 mx-2 lg:mx-10 my-5"
+                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
                 />
                 <div>
-                  <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
+                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-md text-center mt-5">
+                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
                     K7 THERAPIES strives to be an excellent service provider,
                     giving therapies online globally and offline sessions at our
                     well equipped pediatric therapy set up.
@@ -357,57 +358,61 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="  bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          {/* box 2 */}
+          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
-                <img
+              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
+              <img
                   src={img8}
                   alt=""
-                  className="lg:w-[150px] lg:h-[150px] max-sm:w-32 mx-2 lg:mx-10 my-5"
+                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
                 />
                 <div>
-                  <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
+                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-md text-center mt-5">
+                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
                   K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          {/* box 3 */}
+          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
-                <img
+              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
+              <img
                   src={img8}
                   alt=""
-                  className="lg:w-[150px] lg:h-[150px] max-sm:w-32 mx-2 lg:mx-10 my-5"
+                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
                 />
                 <div>
-                  <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
+                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-md text-center mt-5">
-                  We focus on over all health of our children and  believe to bring back the child to their daily life.
+                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
+                  Our multidisciplinary team has expertise in their respective fields and offer comitted and dedicated services for the holistic wellness of our patients.
+
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          {/* box 4 */}
+          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
-                <img
+              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
+              <img
                   src={img8}
                   alt=""
-                  className="lg:w-[150px] lg:h-[150px] max-sm:w-32 mx-2 lg:mx-10 my-5"
+                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
                 />
                 <div>
-                  <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
+                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-md text-center mt-5">
+                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
                   K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
 
                   </p>
@@ -415,20 +420,21 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className=" bg-[#39225a] text-white lg:w-64 h-auto lg:h-[470px] shadow-xl shadow-[#e3e3e3] rounded-xl  mx-auto">
+          {/* box 5 */}
+          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-sm:justify-normal  md:text-wrap">
-                <img
+              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
+              <img
                   src={img8}
                   alt=""
-                  className="lg:w-[150px] lg:h-[150px] max-sm:w-32 mx-2 lg:mx-10 my-5"
+                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
                 />
                 <div>
-                  <p className="text-lg font-bold lg:text-2xl mt-7 text-center">
+                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
                     Child Psychologists
                   </p>
-                  <p className="text-sm lg:text-md text-center mt-5">
-                  Our ultimate goal is to make our children independent leading a successful and fruitful life.
+                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
+                  We focus on children's overall health and aim to help them return to daily life, fostering independence for a successful and fulfilling future.
                   </p>
                 </div>
               </div>
@@ -442,14 +448,13 @@ function Home() {
           The Sunshine Story
         </p>
         <div className="hidden lg:flex lg:justify-center md:hidden">
-          <img src={img13} alt="" className=" " />
-          <img src={img14} alt="" className=" " />
-          <img src={img15} alt="" className=" " />
-          <img src={img12} alt="" className=" " />
-          <img src={img16} alt="" className=" " />
-          <img src={img17} alt="" className=" " />
+          <img src={img13} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
+          <img src={img14} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
+          <img src={img15} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
+          <img src={img12} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
+          <img src={img16} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
+          <img src={img17} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
         </div>
-
         <div className="flex justify-center pt-10 lg:hidden">
           <img src={img18} alt="" className=" h-[500px]" />
         </div>
