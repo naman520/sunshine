@@ -74,7 +74,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <div className="relative group">
+            {/* <div className="relative group">
               <button
                 onClick={toggleLocationDropdown}
                 className="flex items-center gap-1 focus:outline-none relative group"
@@ -110,7 +110,7 @@ export default function Navbar() {
                   </Link>
                 </div>
               )}
-            </div>
+            </div> */}
             <Link to="/contact" className="relative group">
               Contact Us
               <span className="absolute left-0 top-6 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -180,7 +180,7 @@ export default function Navbar() {
     </div>
     
     {/* Location Dropdown */}
-    <div className={`relative ${isLocationDropdownOpen ? 'bg-gray-50' : ''}`}>
+    {/* <div className={`relative ${isLocationDropdownOpen ? 'bg-gray-50' : ''}`}>
       <button 
         onClick={toggleLocationDropdown} 
         className="w-full text-left px-4 py-2 flex justify-between items-center hover:bg-orange-100"
@@ -202,10 +202,10 @@ export default function Navbar() {
       {isLocationDropdownOpen && (
         <div className="pl-4">
           <Link to="/lajpat" className="block px-4 py-2 hover:bg-orange-100">Delhi</Link>
-          {/* Other location links... */}
+          
         </div>
-      )}
-    </div>
+      )}     
+    </div> */}
     
     <Link to="/contact" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>Contact Us</Link>
   </div>

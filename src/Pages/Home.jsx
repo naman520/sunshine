@@ -11,7 +11,7 @@ import img5 from "../assets/wave.svg";
 import img6 from "../assets/banner21.webp";
 import img7 from "../assets/banner23.svg";
 import img8 from "../assets/professionals1.webp";
-import img11 from "../assets/shaitaanbaache1.svg";
+
 import img12 from "../assets/timeline.svg";
 import img13 from "../assets/timeline1.svg";
 import img14 from "../assets/timeline2.svg";
@@ -25,6 +25,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import WhatSection from "./WhatSection";
 
 function Home() {
 
@@ -73,7 +74,7 @@ function Home() {
                 Unlock your child's potential and help them thrive!
               </h1>
               <p className="text-sm lg:text-md font-normal">
-                We at Sunshine by LISSUN have started a chain of clinics to
+                We at K7 Therapies have started a chain of clinics to
                 provide world-class child development services. We specialize in
                 neurodevelopmental and behavioral disorders, especially Autism
                 Spectrum, ADHD & Learning Disorders.
@@ -89,11 +90,10 @@ function Home() {
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6 lg:p-8 w-full max-w-md">
                 <h2 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4">
-                  Book your first discounted session.
+                  Book your first session.
                 </h2>
                 <p className="text-xs lg:text-sm text-gray-700 mb-1">
-                  Avail a discount on your first session to try out our
-                  services.
+                  
                 </p>
                 <form className="" onSubmit={handleSubmit}>
                   <div className="mb-4">
@@ -179,47 +179,11 @@ function Home() {
           <div className="text-2xl lg:text-3xl text-center font-semibold py-6 lg:py-10 text-[#2f2f2f]">
             Contact our Centers:
           </div>
-          <Swiper
-            modules={[Navigation, Pagination, Scrollbar]}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 5 },
-            }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            {LocationData && LocationData.length > 0 ? (
-              LocationData.map((loc) => (
-                <SwiperSlide key={loc.city}>
-                  <div className="mb-16">
-                    <div className="flex flex-col justify-center items-center h-full">
-                      <a
-                        href={`/${loc.city}`}
-                        className="text-xl lg:text-2xl font-semibold text-[#ef833a] mb-2"
-                      >
-                        {loc.city}
-                      </a>
-                      <p className="text-lg lg:text-xl font-semibold text-gray-700 mb-2 text-center">
-                        ({loc.area})
-                      </p>
-                      <p className="text-xs lg:text-sm text-gray-600 text-center">
-                        {loc.phone}
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))
-            ) : (
-              <p className="text-center text-gray-500">
-                No locations available
-              </p>
-            )}
-          </Swiper>
+          <div className="text-center ">
+            <p className="text-3xl font-semibold text-[#ef8d4e]">Delhi</p>
+            <p className="text-xl font-semibold text-[#ef8d4e]">CR Park</p>
+            <p className="text-md ">+91 8802094818</p>
+          </div>
         </div>
       </div>
       <div className="bg-[#eef8f9] pt-10">{/* empty div */}</div>
@@ -235,65 +199,8 @@ function Home() {
         
       </div>
 
-      <div className="bg-[#fcf6de]">
-        <p className="lg:text-5xl font-bold text-center pt-40">
-          What Makes Sunshine by LISSUN Unique
-        </p>
-        <div>
-          <div className=" lg:flex justify-evenly pt-10">
-            <img src={img11} alt="" className="h-56 lg:h-auto ml-20" />
-            <div className="mt-20 lg:mt-32 text-center space-y-5 lg:space-y-10 lg:text-2xl">
-              <p className="font-semibold">
-                Stimulating Environment for your child
-              </p>
-              <p>Thoughtfully designed fostering curiosity and growth.</p>
-              <p>
-                Engaging activities that ignite a love for learning and
-                exploration
-              </p>
-              <p>Encouraging creativity and a sense of wonder</p>
-            </div>
-          </div>
-
-          <div className=" lg:flex justify-evenly pt-10">
-            <img
-              src={img11}
-              alt=""
-              className="h-56 lg:h-auto ml-20 lg:hidden"
-            />
-            <div className="mt-20 lg:mt-32  text-center space-y-5 lg:space-y-10 lg:text-2xl">
-              <p className="font-semibold">
-                Stimulating Environment for your child
-              </p>
-              <p>Thoughtfully designed fostering curiosity and growth.</p>
-              <p>
-                Engaging activities that ignite a love for learning and
-                exploration
-              </p>
-              <p>Encouraging creativity and a sense of wonder</p>
-            </div>
-            <img
-              src={img11}
-              alt=""
-              className="h-56 lg:h-auto ml-20 lg:block md:hidden max-sm:hidden"
-            />
-          </div>
-
-          <div className=" lg:flex justify-evenly pt-10 pb-10">
-            <img src={img11} alt="" className="h-56 lg:h-auto ml-20" />
-            <div className="mt-20 lg:mt-32 text-center space-y-5 lg:space-y-10 lg:text-2xl">
-              <p className="font-semibold">
-                Stimulating Environment for your child
-              </p>
-              <p>Thoughtfully designed fostering curiosity and growth.</p>
-              <p>
-                Engaging activities that ignite a love for learning and
-                exploration
-              </p>
-              <p>Encouraging creativity and a sense of wonder</p>
-            </div>
-          </div>
-        </div>
+      <div className="bg-[#fcf6de] pb-20">
+        <WhatSection />
       </div>
 
       <div className="bg-[#a0cfad] pt-10 lg:pt-28 h-[700px] lg:h-[900px]">
@@ -331,13 +238,13 @@ function Home() {
           />
           <img src={img6} alt="" className="absolute top-10 hidden lg:block " />
           <p className="text-[#2f2f2f] pt-5 text-center w-full ">
-            About K7 THERAPIES
+            Why K7 THERAPIES
           </p>
         </div>
         {/* boxes */}
         <div className="flex flex-col lg:flex-row justify-center gap-y-6 mt-10 lg:mt-32 ">
           {/* box 1 */}
-          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
+          <div className="lg:w-[600px] h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
             <div className="flex flex-col items-center justify-center max-sm:flex-col">
               <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
                 <img
@@ -346,117 +253,37 @@ function Home() {
                   className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
                 />
                 <div>
-                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
-                    Child Psychologists
-                  </p>
-                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
-                    K7 THERAPIES strives to be an excellent service provider,
-                    giving therapies online globally and offline sessions at our
-                    well equipped pediatric therapy set up.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* box 2 */}
-          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
-            <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
-              <img
-                  src={img8}
-                  alt=""
-                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
-                />
-                <div>
-                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
-                    Child Psychologists
-                  </p>
-                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
-                  K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
+                  <p className="text-sm lg:text-md md:text-balance text-start mt-5">
+                    <li>We are a team of well qualified therapists</li>
+                    <li>1:1 child therapist ratio</li>
+                    <li>Pocket friendly therapy charges</li>
+                    <li>Monthly parent-therapist discussion session</li>
+                    <li>Emphasis on social skills development</li>
+                    <li>Parent can sit and watch their child's session</li>
+                    <li>Regular follow-up with the home plan</li>
+                    <li>Regular parent education session</li>
+                    <li>Child friendly environment</li>
+                    <li>We believe in evidence based practice</li>
+                    <li>Complete transparency with the parents</li>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          {/* box 3 */}
-          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
-            <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
-              <img
-                  src={img8}
-                  alt=""
-                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
-                />
-                <div>
-                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
-                    Child Psychologists
-                  </p>
-                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
-                  Our multidisciplinary team has expertise in their respective fields and offer comitted and dedicated services for the holistic wellness of our patients.
+          
 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* box 4 */}
-          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
-            <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
-              <img
-                  src={img8}
-                  alt=""
-                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
-                />
-                <div>
-                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
-                    Child Psychologists
-                  </p>
-                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
-                  K7 Therapies is dedicated to provide therapy services for children dealing with physical, neurological, developmental and mental health issues. 
-
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* box 5 */}
-          <div className="lg:w-60 h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
-            <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
-              <img
-                  src={img8}
-                  alt=""
-                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
-                />
-                <div>
-                  <p className="text-lg font-bold lg:text-2xl md:-mt-28 lg:mt-7 max-sm:mt-5 mt-7 text-center">
-                    Child Psychologists
-                  </p>
-                  <p className="text-sm lg:text-md md:text-balance text-center mt-5">
-                  We focus on children's overall health and aim to help them return to daily life, fostering independence for a successful and fulfilling future.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
         <img src={img7} alt="" className=" lg:ml-2  " />
       </div>
       <div className="bg-[#fcf6de]">
         <p className="text-[#ef833a] text-center pt-20 text-6xl font-bold ">
-          The Sunshine Story
+          About K7 Therapies
         </p>
-        <div className="hidden lg:flex lg:justify-center md:hidden">
-          <img src={img13} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
-          <img src={img14} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
-          <img src={img15} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
-          <img src={img12} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
-          <img src={img16} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
-          <img src={img17} alt="" className="max-lg:h-[150px] max-lg:w-[100px] " />
-        </div>
-        <div className="flex justify-center pt-10 lg:hidden">
-          <img src={img18} alt="" className=" h-[500px]" />
+        <div className="grid grid-flow-col col-span-3 gap-10 sm:text-xl text-center">
+              <div>Our Founder</div>
+              <div>Our Mission</div>
+              <div>Our Vision</div>
         </div>
       </div>
     </>
