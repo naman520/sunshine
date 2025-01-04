@@ -14,6 +14,7 @@ import img9 from "../assets/instagram.svg";
 import img10 from "../assets/phone.svg";
 import img11 from "../assets/address.svg";
 import img12 from "../assets/whychoose.jpg";
+import img13 from "../assets/facebook.svg";
 
 // Correct module imports
 import "swiper/css";
@@ -118,24 +119,20 @@ function Home() {
                       <option value="" disabled selected>
                         Location
                       </option>
-                      <option value="city1">City 1</option>
-                      <option value="city2">City 2</option>
+                      <option value="delhi CR Park">CR Park,Delhi</option>
                     </select>
                   </div>
                   <div className="mb-4">
-                    <select
+                    <input
+                      type="text"
                       name="serviceRequest"
+                      placeholder="Service Request (optional)"
                       className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                       value={formData.serviceRequest}
                       onChange={handleChange}
-                    >
-                      <option value="" disabled selected>
-                        Service Request
-                      </option>
-                      <option value="service1">Service 1</option>
-                      <option value="service2">Service 2</option>
-                    </select>
+                    />
                   </div>
+
                   <button
                     type="submit"
                     className="w-full bg-[#ef833a] text-white font-semibold py-2 lg:py-3 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
@@ -236,30 +233,29 @@ function Home() {
         </div>
         {/* boxes */}
         <div className="flip-card">
-            <div className="flip-card-inner">
-                
-                {/* Front Side */}
-                <div className="flip-card-front">
-                    <img src={img12} alt="Therapist" className="image"  />
-                </div>
-
-                {/* Back Side */}
-                <div className="flip-card-back">
-                    <ul>
-                        <li>We are a team of well qualified therapists</li>
-                        <li>1:1 child therapist ratio</li>
-                        <li>Pocket friendly therapy charges</li>
-                        <li>Monthly parent-therapist discussion session</li>
-                        <li>Emphasis on social skills development</li>
-                        <li>Parent can sit and watch their child's session</li>
-                        <li>Regular follow-up with the home plan</li>
-                        <li>Regular parent education session</li>
-                        <li>Child friendly environment</li>
-                        <li>We believe in evidence based practice</li>
-                        <li>Complete transparency with the parents</li>
-                    </ul>
-                </div>
+          <div className="flip-card-inner">
+            {/* Front Side */}
+            <div className="flip-card-front">
+              <img src={img12} alt="Therapist" className="image" />
             </div>
+
+            {/* Back Side */}
+            <div className="flip-card-back">
+              <ul>
+                <li>We are a team of well qualified therapists</li>
+                <li>1:1 child therapist ratio</li>
+                <li>Pocket friendly therapy charges</li>
+                <li>Monthly parent-therapist discussion session</li>
+                <li>Emphasis on social skills development</li>
+                <li>Parent can sit and watch their child's session</li>
+                <li>Regular follow-up with the home plan</li>
+                <li>Regular parent education session</li>
+                <li>Child friendly environment</li>
+                <li>We believe in evidence based practice</li>
+                <li>Complete transparency with the parents</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <img src={img7} alt="" className=" lg:ml-2  " />
       </div>
@@ -314,7 +310,9 @@ function Home() {
           </div>
           <div className="text-center rounded-lg shadow-lg">
             {/* Heading */}
-            <h2 className="text-2xl font-bold mb-6 text-[#ef833a]">Reach Out to Us</h2>
+            <h2 className="text-2xl font-bold mb-6 text-[#ef833a]">
+              Reach Out to Us
+            </h2>
 
             {/* Instagram Link */}
             <div className="flex items-center text-white justify-center gap-2 mb-4">
@@ -326,6 +324,18 @@ function Home() {
                 className="hover:underline"
               >
                 Instagram
+              </a>
+            </div>
+            {/* Facebook Link */}
+            <div className="flex items-center text-white justify-center gap-2 mb-4">
+              <img src={img13} alt="" className="h-[25px]" />
+              <a
+                href="https://www.facebook.com/K7Therapies?mibextid=ZbWKwL"
+                target=""
+                rel=""
+                className="hover:underline"
+              >
+                Facebook
               </a>
             </div>
 
@@ -344,10 +354,11 @@ function Home() {
         </div>
       </div>
       <div className="text-center bg-[#39225a] text-white">
-              <p>&copy; 2025 K7 Therapies. All Rights Reserved.</p>
-              <a href="https://naman-gupta.vercel.app/">Developed by <span className=" underline">Naman Gupta</span></a>
+        <p>&copy; 2025 K7 Therapies. All Rights Reserved.</p>
+        <a href="https://naman-gupta.vercel.app/">
+          Developed by <span className=" underline">Naman Gupta</span>
+        </a>
       </div>
-
     </>
   );
 }

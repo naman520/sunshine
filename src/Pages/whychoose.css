@@ -1,7 +1,9 @@
 /* Flip Card Container */
 .flip-card {
-    width: 500px;
-    height: 500px;
+    width: 80vw; /* Responsive width based on viewport */
+    height: 80vw;
+    max-width: 500px;
+    max-height: 500px;
     perspective: 1000px;
 
     /* Centering the card */
@@ -59,4 +61,12 @@
 .flip-card-back ul {
     list-style-type: disc;
     padding-left: 20px;
+}
+
+/* Media Query for Smaller Devices */
+@media screen and (max-width: 768px) {
+    .flip-card {
+        width: 90vw;
+        height: 90vw;
+    }
 }
