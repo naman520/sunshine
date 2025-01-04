@@ -28,7 +28,6 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import WhatSection from "./WhatSection";
 
 function Home() {
-
   const [formData, setFormData] = useState({
     parentName: "",
     phoneNumber: "",
@@ -74,8 +73,8 @@ function Home() {
                 Unlock your child's potential and help them thrive!
               </h1>
               <p className="text-sm lg:text-md font-normal">
-                We at K7 Therapies have started a chain of clinics to
-                provide world-class child development services. We specialize in
+                We at K7 Therapies have started a chain of clinics to provide
+                world-class child development services. We specialize in
                 neurodevelopmental and behavioral disorders, especially Autism
                 Spectrum, ADHD & Learning Disorders.
               </p>
@@ -92,9 +91,7 @@ function Home() {
                 <h2 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4">
                   Book your first session.
                 </h2>
-                <p className="text-xs lg:text-sm text-gray-700 mb-1">
-                  
-                </p>
+                <p className="text-xs lg:text-sm text-gray-700 mb-1"></p>
                 <form className="" onSubmit={handleSubmit}>
                   <div className="mb-4">
                     <input
@@ -135,7 +132,7 @@ function Home() {
                       name="serviceRequest"
                       className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                       value={formData.serviceRequest}
-                      onChange={handleChange}  
+                      onChange={handleChange}
                     >
                       <option value="" disabled selected>
                         Service Request
@@ -170,7 +167,11 @@ function Home() {
         </div>
         <div className="relative z-[10] lg:bg-[#eef8f9] -mt-20 md:mt-3 lg:-mt-52">
           <div className="container mx-auto px-4 lg:px-0">
-            <img src={img3} alt="" className="w-full lg:translate-y-28 md:translate-y-4" />
+            <img
+              src={img3}
+              alt=""
+              className="w-full lg:translate-y-28 md:translate-y-4"
+            />
           </div>
         </div>
       </div>
@@ -189,14 +190,12 @@ function Home() {
       <div className="bg-[#eef8f9] pt-10">{/* empty div */}</div>
 
       <div className=" relative bg-[#cfe7d7] lg:bg-transparent text-[#2f2f2f] pt-10 lg:pt-20 ">
-        
         <p className="text-3xl lg:text-5xl  text-center font-bold">
           How can we help your child
         </p>
         <div className="pt-10">
-          <ImageText/>
+          <ImageText />
         </div>
-        
       </div>
 
       <div className="bg-[#fcf6de] pb-20">
@@ -220,7 +219,9 @@ function Home() {
                   <div className="lg:pt-32">
                     <div className="pt-10 lg:pt-32 max-sm:text-sm max-md:text-sm text-md bg-[#efe9d1] text-center rounded-3xl sm:ml-[40px] sm:h-[290px] sm:w-[370px] md:ml-[150px] md:h-[320px] md:w-[450px] lg:ml-[100px] lg:h-[350px] lg:w-[1100px] md:break-words">
                       {item.content}
-                      <div className="font-bold md:mt-4 max-sm:mt-4">~{item.name}</div>
+                      <div className="font-bold md:mt-4 max-sm:mt-4">
+                        ~{item.name}
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -270,9 +271,6 @@ function Home() {
               </div>
             </div>
           </div>
-          
-
-          
         </div>
         <img src={img7} alt="" className=" lg:ml-2  " />
       </div>
@@ -280,10 +278,44 @@ function Home() {
         <p className="text-[#ef833a] text-center pt-20 text-6xl font-bold ">
           About K7 Therapies
         </p>
-        <div className="grid grid-flow-col col-span-3 gap-10 sm:text-xl text-center">
-              <div>Our Founder</div>
-              <div>Our Mission</div>
-              <div>Our Vision</div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:text-xl text-center pt-10 px-5">
+          {/* Our Founder Section */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Our Founder</h3>
+            <p className="text-white">
+              Dr. Kirti Thukral is a renowned occupational therapist with a
+              master's degree in pediatrics. Her love and dedication for
+              children have helped many special needs children shape their
+              future and live independent and fruitful lives.
+            </p>
+          </div>
+
+          {/* Our Mission Section */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Our Mission</h3>
+            <p className="text-[#39225a]">
+              K7 Therapies is fully dedicated to provide pediatric therapy
+              services for children dealing with physical, neurological,
+              developmental and mental health issues.
+            </p>
+            <p className="text-[#39225a]">
+              Our team if qualified therapists who are at par in their respective fields, work dedicatedly with the mission of making each child independent and perform better in their daily life.
+            </p>
+            <p className="text-[#39225a]">
+              We focus on over all health of pur children and believe to bring back the child to their daily life.
+            </p>
+          </div>
+
+          {/* Our Vision Section */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Our Vision</h3>
+            <p className="text-[#39225a]">
+              K7 THERAPIES strives to be an excellent service provider, giving therapies online globally and offline sessions at our well equipped pediatric therapy set up.
+            </p>
+            <p className="text-[#39225a]">
+              Our multidicipinary team has expertise in their respective fields and offer comitted and dedicated services for our holistic wellness of-[#39225a]
+            </p>
+          </div>
         </div>
       </div>
     </>

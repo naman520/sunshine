@@ -217,7 +217,7 @@ export default function Navbar() {
         <div className="flex flex-col md:flex-row justify-center gap-4 items-center p-4">
           <img src={img2} alt="" className="h-[50px] md:h-[80px] " />
           <p className="text-[#9949ba] text-center md:text-left text-lg md:text-xl font-bold ">
-            Coming Soon: Welcome to K7 family opening in CR PARK (Delhi) very soon!
+            Welcome to K7 family at CR PARK (Delhi) 
           </p>
           <img src={img2} alt="" className="h-[50px]  md:block hidden" />
         </div>
