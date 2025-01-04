@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import ImageText from "./ImageText";
-import { LocationData } from "./LocationData";
+import "./whychoose.css";
 import { Testimonials } from "./Testimonials";
 import { Swiper, SwiperSlide } from "swiper/react";
 //import images
@@ -10,15 +10,10 @@ import img4 from "../assets/cloudHero.webp";
 import img5 from "../assets/wave.svg";
 import img6 from "../assets/banner21.webp";
 import img7 from "../assets/banner23.svg";
-import img8 from "../assets/professionals1.webp";
-
-import img12 from "../assets/timeline.svg";
-import img13 from "../assets/timeline1.svg";
-import img14 from "../assets/timeline2.svg";
-import img15 from "../assets/timeline3.svg";
-import img16 from "../assets/timeline4.svg";
-import img17 from "../assets/timeline5.svg";
-import img18 from "../assets/timeline_mobile.webp";
+import img9 from "../assets/instagram.svg";
+import img10 from "../assets/phone.svg";
+import img11 from "../assets/address.svg";
+import img12 from "../assets/whychoose.jpg";
 
 // Correct module imports
 import "swiper/css";
@@ -178,7 +173,7 @@ function Home() {
       <div className="pt-10 lg:pt-52">
         <div className="bg-[#fefcef]">
           <div className="text-2xl lg:text-3xl text-center font-semibold py-6 lg:py-10 text-[#2f2f2f]">
-            Contact our Centers:
+            Contact our Center:
           </div>
           <div className="text-center ">
             <p className="text-3xl font-semibold text-[#ef8d4e]">Delhi</p>
@@ -238,50 +233,44 @@ function Home() {
             className="absolute inset-0 -z-10 object-cover mt-[72px] min-h-screen hidden lg:block "
           />
           <img src={img6} alt="" className="absolute top-10 hidden lg:block " />
-          <p className="text-[#2f2f2f] pt-5 text-center w-full ">
-            Why K7 THERAPIES
-          </p>
         </div>
         {/* boxes */}
-        <div className="flex flex-col lg:flex-row justify-center gap-y-6 mt-10 lg:mt-32 ">
-          {/* box 1 */}
-          <div className="lg:w-[600px] h-auto lg:h-[490px] md:h-[150px] shadow-xl shadow-[#e3e3e3] rounded-xl bg-[#39225a] text-white mx-auto">
-            <div className="flex flex-col items-center justify-center max-sm:flex-col">
-              <div className="max-sm:flex max-md:flex max-md:justify-normal max-sm:justify-normal  md:text-wrap ">
-                <img
-                  src={img8}
-                  alt=""
-                  className="lg:w-[150px] lg:h-[150px] md:h-[100px] max-sm:w-32 mx-2 lg:mx-10 my-5"
-                />
-                <div>
-                  <p className="text-sm lg:text-md md:text-balance text-start mt-5">
-                    <li>We are a team of well qualified therapists</li>
-                    <li>1:1 child therapist ratio</li>
-                    <li>Pocket friendly therapy charges</li>
-                    <li>Monthly parent-therapist discussion session</li>
-                    <li>Emphasis on social skills development</li>
-                    <li>Parent can sit and watch their child's session</li>
-                    <li>Regular follow-up with the home plan</li>
-                    <li>Regular parent education session</li>
-                    <li>Child friendly environment</li>
-                    <li>We believe in evidence based practice</li>
-                    <li>Complete transparency with the parents</li>
-                  </p>
+        <div className="flip-card">
+            <div className="flip-card-inner">
+                
+                {/* Front Side */}
+                <div className="flip-card-front">
+                    <img src={img12} alt="Therapist" className="image"  />
                 </div>
-              </div>
+
+                {/* Back Side */}
+                <div className="flip-card-back">
+                    <ul>
+                        <li>We are a team of well qualified therapists</li>
+                        <li>1:1 child therapist ratio</li>
+                        <li>Pocket friendly therapy charges</li>
+                        <li>Monthly parent-therapist discussion session</li>
+                        <li>Emphasis on social skills development</li>
+                        <li>Parent can sit and watch their child's session</li>
+                        <li>Regular follow-up with the home plan</li>
+                        <li>Regular parent education session</li>
+                        <li>Child friendly environment</li>
+                        <li>We believe in evidence based practice</li>
+                        <li>Complete transparency with the parents</li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
         <img src={img7} alt="" className=" lg:ml-2  " />
       </div>
-      <div className="bg-[#fcf6de]">
-        <p className="text-[#ef833a] text-center pt-20 text-6xl font-bold ">
+      <div className="bg-[#39225a]">
+        <p className="text-white text-center pt-20 text-6xl font-bold ">
           About K7 Therapies
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:text-xl text-center pt-10 px-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 sm:text-xl text-center pt-10 px-5 pb-10">
           {/* Our Founder Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Our Founder</h3>
+            <h3 className="text-2xl font-bold text-[#ef833a]">Our Founder</h3>
             <p className="text-white">
               Dr. Kirti Thukral is a renowned occupational therapist with a
               master's degree in pediatrics. Her love and dedication for
@@ -292,32 +281,73 @@ function Home() {
 
           {/* Our Mission Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Our Mission</h3>
-            <p className="text-[#39225a]">
+            <h3 className="text-2xl font-bold text-[#ef833a]">Our Mission</h3>
+            <p className="text-white">
               K7 Therapies is fully dedicated to provide pediatric therapy
               services for children dealing with physical, neurological,
               developmental and mental health issues.
             </p>
-            <p className="text-[#39225a]">
-              Our team if qualified therapists who are at par in their respective fields, work dedicatedly with the mission of making each child independent and perform better in their daily life.
+            <p className="text-white">
+              Our team if qualified therapists who are at par in their
+              respective fields, work dedicatedly with the mission of making
+              each child independent and perform better in their daily life.
             </p>
-            <p className="text-[#39225a]">
-              We focus on over all health of pur children and believe to bring back the child to their daily life.
+            <p className="text-white">
+              We focus on over all health of pur children and believe to bring
+              back the child to their daily life.
             </p>
           </div>
 
           {/* Our Vision Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Our Vision</h3>
-            <p className="text-[#39225a]">
-              K7 THERAPIES strives to be an excellent service provider, giving therapies online globally and offline sessions at our well equipped pediatric therapy set up.
+            <h3 className="text-2xl font-bold text-[#ef833a]">Our Vision</h3>
+            <p className="text-white">
+              K7 THERAPIES strives to be an excellent service provider, giving
+              therapies online globally and offline sessions at our well
+              equipped pediatric therapy set up.
             </p>
-            <p className="text-[#39225a]">
-              Our multidicipinary team has expertise in their respective fields and offer comitted and dedicated services for our holistic wellness of-[#39225a]
+            <p className="text-white">
+              Our multidicipinary team has expertise in their respective fields
+              and offer comitted and dedicated services for our holistic
+              wellness of-[#39225a]
             </p>
+          </div>
+          <div className="text-center rounded-lg shadow-lg">
+            {/* Heading */}
+            <h2 className="text-2xl font-bold mb-6 text-[#ef833a]">Reach Out to Us</h2>
+
+            {/* Instagram Link */}
+            <div className="flex items-center text-white justify-center gap-2 mb-4">
+              <img src={img9} alt="" className="h-[25px]" />
+              <a
+                href="https://www.instagram.com/k7_therapies/"
+                target=""
+                rel=""
+                className="hover:underline"
+              >
+                Instagram
+              </a>
+            </div>
+
+            {/* Phone Number */}
+            <div className="flex items-center text-white justify-center gap-2 mb-4">
+              <img src={img10} alt="Phone Icon" className="h-[25px]" />
+              <p className="text-lg">+91 8802094818</p>
+            </div>
+
+            {/* Address */}
+            <div className="flex items-center text-white justify-center gap-2">
+              <img src={img11} alt="Location Icon" className="h-[25px]" />
+              <p className="text-lg">I-1793 C.R. PARK, New Delhi-19</p>
+            </div>
           </div>
         </div>
       </div>
+      <div className="text-center bg-[#39225a] text-white">
+              <p>&copy; 2025 K7 Therapies. All Rights Reserved.</p>
+              <a href="https://naman-gupta.vercel.app/">Developed by <span className=" underline">Naman Gupta</span></a>
+      </div>
+
     </>
   );
 }
