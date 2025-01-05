@@ -305,7 +305,7 @@ function Home() {
             <p className="text-white">
               Our multidicipinary team has expertise in their respective fields
               and offer comitted and dedicated services for our holistic
-              wellness of-[#39225a]
+              wellness of our patients.
             </p>
           </div>
           <div className="text-center rounded-lg shadow-lg">
