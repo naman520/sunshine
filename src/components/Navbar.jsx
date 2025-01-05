@@ -173,7 +173,11 @@ export default function Navbar() {
       </button>
       {isServicesDropdownOpen && (
         <div className="pl-4">
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Occupational Therapy</Link>
           <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Speech Therapy</Link>
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Special Education</Link>
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Behavioural Therapy</Link>
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Parent & Child Counselling</Link>
           {/* Other service links... */}
         </div>
       )}
