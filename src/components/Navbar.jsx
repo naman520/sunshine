@@ -55,7 +55,7 @@ export default function Navbar() {
                 <span className="absolute left-0 top-6 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </button>
               {isServicesDropdownOpen && (
-                <div className="absolute left-0 mt-2 bg-white text-gray-400 shadow-lg rounded w-48 z-10">
+                <div className="absolute left-0 mt-2 bg-white text-gray-400 shadow-lg rounded w-48 z-20">
                   <Link to="/service1" className="block px-2 py-2 hover:bg-orange-200 hover:text-black">
                     Speech Therapy
                   </Link>
