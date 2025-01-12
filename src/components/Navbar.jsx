@@ -111,7 +111,7 @@ export default function Navbar() {
                 </div>
               )}
             </div> */}
-            <Link to="/contact" className="relative group">
+            <Link to="https://wa.link/mi358a" className="relative group">
               Contact Us
               <span className="absolute left-0 top-6 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
@@ -211,7 +211,7 @@ export default function Navbar() {
       )}     
     </div> */}
     
-    <Link to="/contact" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>Contact Us</Link>
+    <Link to="https://wa.link/mi358a" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>Contact Us</Link>
   </div>
 </div>
       </div>
