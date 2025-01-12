@@ -39,7 +39,7 @@ function Home() {
 
   // Replace with your deployed Google Apps Script URL
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyVSivVhWf7shdn5CpnDNhpefix_gFM8ulC6LLI0YkRD2c2KkDrHj2iDPw6zcsTMIh2eg/exec";
+    "https://script.google.com/macros/s/AKfycbypzFSpXNPNZR-IhWpF87N4cT5eG1GXMER8dwhFTuN3NdQh1odjExGFhR_kOFBEXtYquQ/exec";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
