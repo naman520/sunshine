@@ -55,7 +55,7 @@ export default function Navbar() {
                 <span className="absolute left-0 top-6 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </button>
               {isServicesDropdownOpen && (
-                <div className="absolute left-0 mt-2 bg-white text-gray-400 shadow-lg rounded w-48 z-10">
+                <div className="absolute left-0 mt-2 bg-white text-gray-400 shadow-lg rounded w-48 z-20">
                   <Link to="/service1" className="block px-2 py-2 hover:bg-orange-200 hover:text-black">
                     Speech Therapy
                   </Link>
@@ -111,7 +111,7 @@ export default function Navbar() {
                 </div>
               )}
             </div> */}
-            <Link to="/contact" className="relative group">
+            <Link to="https://wa.link/mi358a" className="relative group">
               Contact Us
               <span className="absolute left-0 top-6 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
@@ -173,7 +173,13 @@ export default function Navbar() {
       </button>
       {isServicesDropdownOpen && (
         <div className="pl-4">
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Occupational Therapy</Link>
           <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Speech Therapy</Link>
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Special Education</Link>
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Behavioural Therapy</Link>
+          <Link to="/service1" className="block px-4 py-2 hover:bg-orange-100">Parent & Child Counselling</Link>
+
+                    
           {/* Other service links... */}
         </div>
       )}
@@ -207,7 +213,7 @@ export default function Navbar() {
       )}     
     </div> */}
     
-    <Link to="/contact" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>Contact Us</Link>
+    <Link to="https://wa.link/mi358a" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>Contact Us</Link>
   </div>
 </div>
       </div>
