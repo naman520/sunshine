@@ -353,7 +353,7 @@ function Home() {
             <p className="text-white">
               Our multidicipinary team has expertise in their respective fields
               and offer comitted and dedicated services for our holistic
-              wellness of our patients
+              wellness of-[#39225a]
             </p>
           </div>
           <div className="text-center rounded-lg shadow-lg">
@@ -412,7 +412,7 @@ function Home() {
           <img src={img14} alt="" />
         </a>
         <a href="https://wa.link/mi358a">
-          <p className="max-sm:hidden text-white text-xl font-bold">Contact us</p>
+          <p className="max-sm:hidden text-white text-xl">Contact us</p>
         </a>
       </div>
     </>
