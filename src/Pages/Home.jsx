@@ -4,6 +4,8 @@ import ImageText from "./ImageText";
 import "./whychoose.css";
 import { Testimonials } from "./Testimonials";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import '../Pages/external.css'
 //import images
 import img3 from "../assets/Grouphero.svg";
 import img4 from "../assets/cloudHero.webp";
@@ -15,6 +17,7 @@ import img10 from "../assets/phone.svg";
 import img11 from "../assets/address.svg";
 import img12 from "../assets/whychoose.jpg";
 import img13 from "../assets/facebook.svg";
+import img14 from "../assets/whatsapp.svg";
 
 // Correct module imports
 import "swiper/css";
@@ -22,6 +25,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import WhatSection from "./WhatSection";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [formData, setFormData] = useState({
@@ -30,32 +34,63 @@ function Home() {
     location: "",
     serviceRequest: "",
   });
+  const [status, setStatus] = useState({ type: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Replace with your deployed Google Apps Script URL
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbyVSivVhWf7shdn5CpnDNhpefix_gFM8ulC6LLI0YkRD2c2KkDrHj2iDPw6zcsTMIh2eg/exec";
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ type: "", message: "" });
 
-    const { parentName, phoneNumber, location, serviceRequest } = formData;
+    // Create form data
+    const formDataObj = new FormData();
+    Object.keys(formData).forEach((key) => {
+      formDataObj.append(key, formData[key]);
+    });
+    formDataObj.append("timestamp", new Date().toISOString());
 
-    // Validate form data
-    if (!parentName || !phoneNumber || !location || !serviceRequest) {
-      alert("Please fill out all fields.");
-      return;
+    try {
+      // Use no-cors mode and form data instead of JSON
+      const response = await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formDataObj,
+      });
+
+      // Since we're using no-cors, we won't get a proper response
+      // We'll assume success if no error is thrown
+      setFormData({
+        parentName: "",
+        phoneNumber: "",
+        location: "",
+        serviceRequest: "",
+      });
+      setStatus({
+        type: "success",
+        message: "Thank you for your submission! We'll get back to you soon.",
+      });
+    } catch (error) {
+      console.error("Submission error:", error);
+      setStatus({
+        type: "error",
+        message: "Something went wrong. Please try again later.",
+      });
     }
 
-    // Format message for WhatsApp
-    const message = `Hello,%0A
-      Parent Name: ${encodeURIComponent(parentName)}%0A
-      Phone Number: ${encodeURIComponent(phoneNumber)}%0A
-      Location: ${encodeURIComponent(location)}%0A
-      Service Request: ${encodeURIComponent(serviceRequest)}`;
-
-    // Redirect to WhatsApp chat
-    const whatsappUrl = `https://wa.me/+918920563009?text=${message}`;
-    window.location.href = whatsappUrl;
+    setTimeout(() => setStatus({ type: "", message: "" }), 5000);
+    setIsSubmitting(false);
   };
 
   return (
@@ -88,38 +123,39 @@ function Home() {
                   Book your first session.
                 </h2>
                 <p className="text-xs lg:text-sm text-gray-700 mb-1"></p>
-                <form className="" onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="">
                   <div className="mb-4">
                     <input
                       type="text"
                       name="parentName"
                       placeholder="Parent Name"
-                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                       value={formData.parentName}
                       onChange={handleChange}
+                      required
+                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                     />
                   </div>
                   <div className="mb-4">
                     <input
-                      type="text"
+                      type="tel"
                       name="phoneNumber"
                       placeholder="Phone Number"
-                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                       value={formData.phoneNumber}
                       onChange={handleChange}
+                      required
+                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                     />
                   </div>
                   <div className="mb-4">
                     <select
                       name="location"
-                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                       value={formData.location}
                       onChange={handleChange}
+                      required
+                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                     >
-                      <option value="" disabled selected>
-                        Location
-                      </option>
-                      <option value="delhi CR Park">CR Park,Delhi</option>
+                      <option value="">Select Location</option>
+                      <option value="delhi CR Park">CR Park, Delhi</option>
                     </select>
                   </div>
                   <div className="mb-4">
@@ -127,19 +163,31 @@ function Home() {
                       type="text"
                       name="serviceRequest"
                       placeholder="Service Request (optional)"
-                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                       value={formData.serviceRequest}
                       onChange={handleChange}
+                      className="w-full px-3 py-2 lg:px-4 lg:py-3 border rounded-lg text-gray-800 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                     />
                   </div>
-
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full bg-[#ef833a] text-white font-semibold py-2 lg:py-3 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-300 text-sm lg:text-base"
                   >
-                    Submit
+                    {isSubmitting ? "Submitting..." : "Submit"}
                   </button>
                 </form>
+
+                {status.type === "success" && (
+                  <div className="mt-6 p-4 bg-green-50 text-green-700 rounded-lg">
+                    {status.message}
+                  </div>
+                )}
+
+                {status.type === "error" && (
+                  <div className="mt-6 p-4 bg-red-50 text-red-700 rounded-lg">
+                    {status.message}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -305,7 +353,7 @@ function Home() {
             <p className="text-white">
               Our multidicipinary team has expertise in their respective fields
               and offer comitted and dedicated services for our holistic
-              wellness of our patients.
+              wellness of our patients
             </p>
           </div>
           <div className="text-center rounded-lg shadow-lg">
@@ -357,6 +405,14 @@ function Home() {
         <p>&copy; 2025 K7 Therapies. All Rights Reserved.</p>
         <a href="https://naman-gupta.vercel.app/">
           Developed by <span className=" underline">Naman Gupta</span>
+        </a>
+      </div>
+      <div className="flex justify-center md:bg-green-600 md:w-[200px] md:h-16 rounded-full items-center fixed-bottom-right">
+        <a href="https://wa.link/mi358a">
+          <img src={img14} alt="" />
+        </a>
+        <a href="https://wa.link/mi358a">
+          <p className="max-sm:hidden text-white text-xl font-bold">Contact us</p>
         </a>
       </div>
     </>
