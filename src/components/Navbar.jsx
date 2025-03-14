@@ -128,7 +128,9 @@ export default function Navbar() {
                 onClick={toggleServicesDropdown}  
                 className="w-full text-left px-4 py-2 flex justify-between items-center hover:bg-orange-100"  
               >  
+                              <Link to="/service" className="focus:outline-none">  
                 Services  
+              </Link>  
                 <svg  
                   xmlns="http://www.w3.org/2000/svg"  
                   className={`h-4 w-4 transition-transform duration-300 ${  
