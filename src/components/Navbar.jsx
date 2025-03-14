@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import img1 from "../assets/k77.webp";
 import img2 from "../assets/Comingsoon1.webp";
 
@@ -7,6 +7,7 @@ export default function Navbar() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const serviceRef = useRef(null);
+  const navigate = useNavigate(); // ✅ React Router navigation
 
   const toggleServicesDropdown = (event) => {
     event.preventDefault();
@@ -18,10 +19,9 @@ export default function Navbar() {
     setIsServicesDropdownOpen(false);
   };
 
-  const handleLinkClick = () => {
-    setTimeout(() => {
-      setIsServicesDropdownOpen(false);
-    }, 150); // Delay to allow navigation before dropdown closes
+  const handleLinkClick = (path) => {
+    navigate(path); // ✅ Navigate to the page
+    setIsServicesDropdownOpen(false); // ✅ Close dropdown after navigation
   };
 
   useEffect(() => {
@@ -41,15 +41,15 @@ export default function Navbar() {
         <div className="lg:flex justify-between items-center hidden px-8">
           <img src={img1} alt="Logo" className="pt-1 h-[80px]" />
           <div className="flex gap-8 text-black text-md font-medium">
-            <Link to="/" className="relative group">
+            <button onClick={() => handleLinkClick("/")} className="relative group">
               Home
-            </Link>
+            </button>
 
             {/* ✅ Services Section */}
             <div className="relative group flex items-center" ref={serviceRef}>
-              <Link to="/service" className="focus:outline-none">
+              <button onClick={() => handleLinkClick("/service")} className="focus:outline-none">
                 Services
-              </Link>
+              </button>
 
               <button onClick={toggleServicesDropdown} className="focus:outline-none ml-1">
                 <svg
@@ -67,49 +67,29 @@ export default function Navbar() {
               </button>
 
               {isServicesDropdownOpen && (
-                <div className="absolute left-0 mt-56 bg-white text-gray-700 shadow-lg rounded w-48 z-20">
-                  <Link
-                    to="/speech-therapy"
-                    className="block px-4 py-2 hover:bg-orange-200"
-                    onClick={handleLinkClick}
-                  >
+                <div className="absolute left-0 mt-10 bg-white text-gray-700 shadow-lg rounded w-48 z-20">
+                  <button onClick={() => handleLinkClick("/speech-therapy")} className="block px-4 py-2 hover:bg-orange-200 w-full text-left">
                     Speech Therapy
-                  </Link>
-                  <Link
-                    to="/occupational-therapy"
-                    className="block px-4 py-2 hover:bg-orange-200"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/occupational-therapy")} className="block px-4 py-2 hover:bg-orange-200 w-full text-left">
                     Occupational Therapy
-                  </Link>
-                  <Link
-                    to="/special-education"
-                    className="block px-4 py-2 hover:bg-orange-200"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/special-education")} className="block px-4 py-2 hover:bg-orange-200 w-full text-left">
                     Special Education
-                  </Link>
-                  <Link
-                    to="/psychological-counselling"
-                    className="block px-4 py-2 hover:bg-orange-200"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/psychological-counselling")} className="block px-4 py-2 hover:bg-orange-200 w-full text-left">
                     Parent & Child Counselling
-                  </Link>
-                  <Link
-                    to="/service4"
-                    className="block px-4 py-2 hover:bg-orange-200"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/service4")} className="block px-4 py-2 hover:bg-orange-200 w-full text-left">
                     Behavioural Therapy
-                  </Link>
+                  </button>
                 </div>
               )}
             </div>
 
-            <Link to="/contact" className="relative group">
+            <button onClick={() => handleLinkClick("/contact")} className="relative group">
               Contact Us
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -143,16 +123,13 @@ export default function Navbar() {
               </button>
             </div>
 
-            <Link to="/" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>
+            <button onClick={() => handleLinkClick("/")} className="px-4 py-2 hover:bg-orange-100">
               Home
-            </Link>
+            </button>
 
             {/* ✅ Services Dropdown in Mobile */}
             <div className="relative">
-              <button
-                onClick={toggleServicesDropdown}
-                className="w-full text-left px-4 py-2 flex justify-between items-center hover:bg-orange-100"
-              >
+              <button onClick={toggleServicesDropdown} className="w-full text-left px-4 py-2 flex justify-between items-center hover:bg-orange-100">
                 Services
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -170,49 +147,34 @@ export default function Navbar() {
 
               {isServicesDropdownOpen && (
                 <div className="pl-4">
-                  <Link
-                    to="/speech-therapy"
-                    className="block px-4 py-2 hover:bg-orange-100"
-                    onClick={handleLinkClick}
-                  >
+                  <button onClick={() => handleLinkClick("/speech-therapy")} className="block px-4 py-2 hover:bg-orange-100">
                     Speech Therapy
-                  </Link>
-                  <Link
-                    to="/occupational-therapy"
-                    className="block px-4 py-2 hover:bg-orange-100"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/occupational-therapy")} className="block px-4 py-2 hover:bg-orange-100">
                     Occupational Therapy
-                  </Link>
-                  <Link
-                    to="/special-education"
-                    className="block px-4 py-2 hover:bg-orange-100"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/special-education")} className="block px-4 py-2 hover:bg-orange-100">
                     Special Education
-                  </Link>
-                  <Link
-                    to="/psychological-counselling"
-                    className="block px-4 py-2 hover:bg-orange-100"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/psychological-counselling")} className="block px-4 py-2 hover:bg-orange-100">
                     Parent & Child Counselling
-                  </Link>
-                  <Link
-                    to="/service4"
-                    className="block px-4 py-2 hover:bg-orange-100"
-                    onClick={handleLinkClick}
-                  >
+                  </button>
+                  <button onClick={() => handleLinkClick("/service4")} className="block px-4 py-2 hover:bg-orange-100">
                     Behavioural Therapy
-                  </Link>
+                  </button>
                 </div>
               )}
             </div>
-
-            <Link to="/contact" className="px-4 py-2 hover:bg-orange-100" onClick={toggleMenu}>
-              Contact Us
-            </Link>
           </div>
+        </div>
+      </div>
+<div className="bg-[#89c39a]">
+        <div className="flex flex-col md:flex-row justify-center gap-4 items-center p-4">
+          <img src={img2} alt="" className="h-[50px] md:h-[80px] " />
+          <p className="text-[#9949ba] text-center md:text-left text-lg md:text-xl font-bold ">
+            Welcome to K7 family at CR PARK (Delhi) 
+          </p>
+          <img src={img2} alt="" className="h-[50px]  md:block hidden" />
         </div>
       </div>
     </>
