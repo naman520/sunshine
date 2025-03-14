@@ -11,7 +11,7 @@ export default function SpeechTherapy() {
           <img
             src={speechTherapyImage}
             alt="Speech Therapy"
-            className="w-full h-64 object-cover"
+            className="w-full h-full object-cover"
             />
           {/* Title Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
