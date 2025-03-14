@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import img1 from "../assets/k77.webp";
-import img2 from '../assets/Comingsoon1.webp';
+import img2 from "../assets/Comingsoon1.webp";
 
 export default function Navbar() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
   const serviceRef = useRef(null);
 
   const toggleServicesDropdown = (event) => {
@@ -17,6 +16,12 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setIsServicesDropdownOpen(false);
+  };
+
+  const handleLinkClick = () => {
+    setTimeout(() => {
+      setIsServicesDropdownOpen(false);
+    }, 150); // Delay to allow navigation before dropdown closes
   };
 
   useEffect(() => {
@@ -63,19 +68,39 @@ export default function Navbar() {
 
               {isServicesDropdownOpen && (
                 <div className="absolute left-0 mt-56 bg-white text-gray-700 shadow-lg rounded w-48 z-20">
-                  <Link to="/speech-therapy" className="block px-4 py-2 hover:bg-orange-200">
+                  <Link
+                    to="/speech-therapy"
+                    className="block px-4 py-2 hover:bg-orange-200"
+                    onClick={handleLinkClick}
+                  >
                     Speech Therapy
                   </Link>
-                  <Link to="/occupational-therapy" className="block px-4 py-2 hover:bg-orange-200">
+                  <Link
+                    to="/occupational-therapy"
+                    className="block px-4 py-2 hover:bg-orange-200"
+                    onClick={handleLinkClick}
+                  >
                     Occupational Therapy
                   </Link>
-                  <Link to="/special-education" className="block px-4 py-2 hover:bg-orange-200">
+                  <Link
+                    to="/special-education"
+                    className="block px-4 py-2 hover:bg-orange-200"
+                    onClick={handleLinkClick}
+                  >
                     Special Education
                   </Link>
-                  <Link to="/psychological-counselling" className="block px-4 py-2 hover:bg-orange-200">
+                  <Link
+                    to="/psychological-counselling"
+                    className="block px-4 py-2 hover:bg-orange-200"
+                    onClick={handleLinkClick}
+                  >
                     Parent & Child Counselling
                   </Link>
-                  <Link to="/service4" className="block px-4 py-2 hover:bg-orange-200">
+                  <Link
+                    to="/service4"
+                    className="block px-4 py-2 hover:bg-orange-200"
+                    onClick={handleLinkClick}
+                  >
                     Behavioural Therapy
                   </Link>
                 </div>
@@ -145,19 +170,39 @@ export default function Navbar() {
 
               {isServicesDropdownOpen && (
                 <div className="pl-4">
-                  <Link to="/speech-therapy" className="block px-4 py-2 hover:bg-orange-100">
+                  <Link
+                    to="/speech-therapy"
+                    className="block px-4 py-2 hover:bg-orange-100"
+                    onClick={handleLinkClick}
+                  >
                     Speech Therapy
                   </Link>
-                  <Link to="/occupational-therapy" className="block px-4 py-2 hover:bg-orange-100">
+                  <Link
+                    to="/occupational-therapy"
+                    className="block px-4 py-2 hover:bg-orange-100"
+                    onClick={handleLinkClick}
+                  >
                     Occupational Therapy
                   </Link>
-                  <Link to="/special-education" className="block px-4 py-2 hover:bg-orange-100">
+                  <Link
+                    to="/special-education"
+                    className="block px-4 py-2 hover:bg-orange-100"
+                    onClick={handleLinkClick}
+                  >
                     Special Education
                   </Link>
-                  <Link to="/psychological-counselling" className="block px-4 py-2 hover:bg-orange-100">
+                  <Link
+                    to="/psychological-counselling"
+                    className="block px-4 py-2 hover:bg-orange-100"
+                    onClick={handleLinkClick}
+                  >
                     Parent & Child Counselling
                   </Link>
-                  <Link to="/service4" className="block px-4 py-2 hover:bg-orange-100">
+                  <Link
+                    to="/service4"
+                    className="block px-4 py-2 hover:bg-orange-100"
+                    onClick={handleLinkClick}
+                  >
                     Behavioural Therapy
                   </Link>
                 </div>
@@ -168,15 +213,6 @@ export default function Navbar() {
               Contact Us
             </Link>
           </div>
-        </div>
-      </div>
-      <div className="bg-[#89c39a]">
-        <div className="flex flex-col md:flex-row justify-center gap-4 items-center p-4">
-          <img src={img2} alt="" className="h-[50px] md:h-[80px] " />
-          <p className="text-[#9949ba] text-center md:text-left text-lg md:text-xl font-bold ">
-            Welcome to K7 family at CR PARK (Delhi) 
-          </p>
-          <img src={img2} alt="" className="h-[50px]  md:block hidden" />
         </div>
       </div>
     </>
