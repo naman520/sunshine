@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import img1 from '../assets/whitelogo.7148e965.svg';
 import img2 from '../assets/Comingsoon1.webp';
 import { Link } from 'react-router-dom';
@@ -8,12 +8,19 @@ export default function Nav() {
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const serviceRef = useRef(null);
+  const locationRef = useRef(null);
+
   const toggleServicesDropdown = () => {
     setIsServicesDropdownOpen(!isServicesDropdownOpen);
+    setIsLocationDropdownOpen(false);
   };
+
+
 
   const toggleLocationDropdown = () => {
     setIsLocationDropdownOpen(!isLocationDropdownOpen);
+    setIsServicesDropdownOpen(false);
   };
 
   const toggleMenu = () => {
@@ -22,6 +29,20 @@ export default function Nav() {
     setIsServicesDropdownOpen(false);
     setIsLocationDropdownOpen(false);
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (serviceRef.current && serviceRef.current.contains(event.target)) {
+        setIsServicesDropdownOpen(false);
+      }
+    }
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
 
   return (
     <>
