@@ -8,6 +8,7 @@ export default function SpeechTherapy() {
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
         {/* Image Section */}
         <div className="relative">
+            
           <img
             src={speechTherapyImage}
             alt="Speech Therapy"
