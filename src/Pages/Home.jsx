@@ -323,7 +323,7 @@ function Home() {
         </div>
         <img src={img7} alt="" className=" lg:ml-2  " />
       </div>
-      <Footer/>
+ 
     </>
   );
 }
