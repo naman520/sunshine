@@ -4,7 +4,7 @@ import occupationalTherapyImage from "../assets/OT.jpg"; // Correct the image pa
 export default function OccupationalTherapy() {
   return (
     <div className="bg-[#9949ba] min-h-screen flex items-center justify-center">
-      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="max-w-4xl w-full bg-white max-sm:ml-5 max-sm:mr-5 shadow-lg rounded-lg overflow-hidden">
         {/* Image Section */}
         <div className="relative">
           <img
@@ -21,9 +21,14 @@ export default function OccupationalTherapy() {
         </div>
 
         {/* Content Section */}
-        <div className="p-6 text-center">
+        <div className="p-6 md:text-center">
           <p className="text-gray-700 text-lg leading-relaxed">
-            Pediatric occupational therapy engages children in therapeutic activities to improve daily life awareness and enhance their overall functional independence.
+            Paediatric occupational therapy is meant to deliver medical practice
+            to children upto 14 years of age by treating any pediatric condition
+            by engaging the child, their mind in therapeutic activities and
+            improving awareness in daily life by using approaches like sensory
+            integration, Oro-motor therapy, environmental modification,
+            cognitive rehabilitation, gait training etc.
           </p>
         </div>
       </div>

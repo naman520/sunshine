@@ -123,7 +123,7 @@ export default function Navbar() {
             </Link>
 
             {/* ✅ Services Dropdown in Mobile */}
-            <div className="relative">
+            <div className="relative" ref={serviceRef}>
               <button
                 onClick={toggleServicesDropdown}
                 className="w-full text-left px-4 py-2 flex justify-between items-center hover:bg-orange-100"
